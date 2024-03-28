@@ -1,6 +1,17 @@
-#!/bin/bash
+#!/bin/env/bash
 
-sketchybar --add item battery right \
-           --set battery update_freq=120 \
-                         script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change
+battery=(
+  icon.font.size=16
+  icon.padding_right=0
+  icon.font.style="Light"
+  update_freq=60                                             
+  popup.align=right                                            
+  script="$PLUGIN_DIR/battery.sh"                              
+  updates=when_shown                                           
+)
+
+sketchybar                                 \
+  --add item battery right                 \
+  --set battery "${battery[@]}"            \
+  --subscribe battery power_source_change  \
+                      mouse.clicked
