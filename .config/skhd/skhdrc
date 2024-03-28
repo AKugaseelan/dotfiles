@@ -58,3 +58,4 @@ shift + alt - 6 : yabai -m window --space 6;
 ctrl + alt - q : brew services stop yabai
 ctrl + alt - s : brew services start yabai
 ctrl + alt - r : brew services restart yabai
+ctrl + alt - b : sketchybar --reload
