@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 render_item() {
-  sketchybar --set $NAME label="$(date "+%I:%M %p")" \
+  sketchybar --set $NAME label="$(date "+%H:%M ")" \
              --set date icon.drawing=$drawing
 }
 
