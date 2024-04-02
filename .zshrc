@@ -117,3 +117,5 @@ alias config="git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+eval "$(starship init zsh)"
