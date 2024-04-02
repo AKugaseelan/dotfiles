@@ -8,15 +8,15 @@ POPUP_CLICK_SCRIPT="sketchybar --set wifi popup.drawing=toggle"
 
 IS_VPN=$(/usr/local/bin/piactl get connectionstate)
 # IS_VPN="Disconnected"
-CURRENT_WIFI="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I)"
-IP_ADDRESS="$(ipconfig getifaddr en0)"
-SSID="$(echo "$CURRENT_WIFI" | grep -o "SSID: .*" | sed 's/^SSID: //')"
+CURRENT_WIFI="$(networksetup -getairportnetwork en0 awk -F ': ' '{print $2}')"
+IP_ADDRESS="$(ipconfig getifaddr en6)"
+SSID="$(echo "$CURRENT_WIFI")"
 CURR_TX="$(echo "$CURRENT_WIFI" | grep -o "lastTxRate: .*" | sed 's/^lastTxRate: //')"
 
-if [[ $IS_VPN != "Disconnected" ]]; then
-  ICON_COLOR=$HIGHLIGHT
-  ICON=􀎡
-elif [[ $SSID = "Ebrietas" ]]; then
+# if [[ $IS_VPN != "Disconnected" ]]; then
+#   ICON_COLOR=$HIGHLIGHT
+#   ICON=􀎡
+if [[ $SSID = "ID10T" ]]; then
   ICON_COLOR=$(getcolor white)
   ICON=􀉤
 elif [[ $SSID != "" ]]; then
