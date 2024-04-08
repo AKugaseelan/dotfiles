@@ -9,7 +9,7 @@ POPUP_CLICK_SCRIPT="sketchybar --set wifi popup.drawing=toggle"
 IS_VPN=$(/usr/local/bin/piactl get connectionstate)
 # IS_VPN="Disconnected"
 CURRENT_WIFI="$(networksetup -getairportnetwork en0 awk -F ': ' '{print $2}')"
-IP_ADDRESS="$(ipconfig getifaddr en6)"
+IP_ADDRESS="$(ipconfig getifaddr en0)"
 SSID="$(echo "$CURRENT_WIFI")"
 CURR_TX="$(echo "$CURRENT_WIFI" | grep -o "lastTxRate: .*" | sed 's/^lastTxRate: //')"
 
