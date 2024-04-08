@@ -113,6 +113,8 @@ source $ZSH/oh-my-zsh.sh
 alias top="vtop --theme certs"
 alias oldtop="/usr/bin/top"
 alias config="git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME"
+alias tamain="tmux attach -t main"
+alias tnmain="tmux new -s main"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
