@@ -117,5 +117,6 @@ alias config="git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+export PATH="/Users/akugaseelan/.local/share/nvim/mason/packages/jdtls/bin/jdtls:/usr/local/opt/openjdk@17/bin:$PATH"
+export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 eval "$(starship init zsh)"
