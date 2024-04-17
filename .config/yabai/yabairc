@@ -29,9 +29,10 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 # yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^Music$" manage=off
+yabai -m rule --add app="^QuickTime Player$"
 
 # add height of sketchybar
-yabai -m config external_bar all:32:0
+yabai -m config external_bar all:40:0
 
 # load jankyborder
 # borders active_color=0xff1ac1f5 inactive_color=0xff7b7474 width=8.0 &

@@ -153,6 +153,12 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["powershell_es"].setup({
+			bundle_path = "~/PowerShellEditorServices/",
+			capabilties = capabilities,
+			on_attach = on_attach,
+		})
+
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
 			capabilities = capabilities,
