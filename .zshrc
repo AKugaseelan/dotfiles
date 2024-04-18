@@ -115,6 +115,7 @@ alias oldtop="/usr/bin/top"
 alias config="git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME"
 alias tamain="tmux attach -t main"
 alias tnmain="tmux new -s main"
+alias cat="bat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
