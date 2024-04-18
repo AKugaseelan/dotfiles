@@ -121,4 +121,31 @@ alias tnmain="tmux new -s main"
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/Users/akugaseelan/.local/share/nvim/mason/packages/jdtls/bin/jdtls:/usr/local/opt/openjdk@17/bin:$PATH"
 export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
-eval "$(starship init zsh)"
+## Setup fzf
+eval "$(fzf --zsh)"
+## Setup fzf to use fd instead of find
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fs --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+_fzf_compgen_path()
+{
+  fd --hidden --exclude .git . "$1"
+}
+
+_fzf_compgen_dir()
+{
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/Dev/fzf-git.sh/fzf-git.sh
+# --- setup fzf theme ---
+fg="#CBE0F0"
+bg="#011628"
+bg_highlight="#143652"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+export BAT_THEME="Solarized (light)"
