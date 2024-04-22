@@ -139,6 +139,7 @@ _fzf_compgen_dir()
   fd --type=d --hidden --exclude .git . "$1"
 }
 
+source ~/Dev/fzf-docker/docker-fzf
 source ~/Dev/fzf-git.sh/fzf-git.sh
 # --- setup fzf theme ---
 fg="#CBE0F0"
