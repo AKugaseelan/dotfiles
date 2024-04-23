@@ -81,6 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     git
     zsh-autosuggestions
+    fzf-docker
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,7 +121,7 @@ alias cat="bat"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="/Users/akugaseelan/.local/share/nvim/mason/packages/jdtls/bin/jdtls:/usr/local/opt/openjdk@17/bin:$PATH"
+export PATH="/Users/akugaseelan/.local/share/nvim/mason/packages/jdtls/bin/jdtls:/usr/local/opt/openjdk@17/bin:/usr/local/sbin::$PATH"
 export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 ## Setup fzf
 eval "$(fzf --zsh)"
@@ -139,7 +140,6 @@ _fzf_compgen_dir()
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/Dev/fzf-docker/docker-fzf
 source ~/Dev/fzf-git.sh/fzf-git.sh
 # --- setup fzf theme ---
 fg="#CBE0F0"
