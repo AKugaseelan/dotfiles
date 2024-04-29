@@ -1,4 +1,4 @@
-neofetch
+fastfetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -117,6 +117,8 @@ alias config="git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME"
 alias tamain="tmux attach -t main"
 alias tnmain="tmux new -s main"
 alias cat="bat"
+alias vim="nvim"
+alias ic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
