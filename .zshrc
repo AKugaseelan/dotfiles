@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias top="vtop --theme certs"
+alias top="btop"
 alias oldtop="/usr/bin/top"
 alias config="git --git-dir=$HOME/Dev/dotfiles --work-tree=$HOME"
 alias tamain="tmux attach -t main"
@@ -119,6 +119,7 @@ alias tnmain="tmux new -s main"
 alias cat="bat"
 alias vim="nvim"
 alias ic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
+alias scratch="nvim scratch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
