@@ -1,4 +1,4 @@
-neofetch
+fastfetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,9 +8,10 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/usr/share/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -117,11 +118,6 @@ alias tamain="tmux attach -t main"
 alias tnmain="tmux new -s main"
 alias cat="bat"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="/Users/akugaseelan/.local/share/nvim/mason/packages/jdtls/bin/jdtls:/usr/local/opt/openjdk@17/bin:$PATH"
-export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 ## Setup fzf
 eval "$(fzf --zsh)"
 ## Setup fzf to use fd instead of find
@@ -139,7 +135,7 @@ _fzf_compgen_dir()
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/Dev/fzf-git.sh/fzf-git.sh
+source ~/dev/fzf-git.sh/fzf-git.sh
 # --- setup fzf theme ---
 fg="#CBE0F0"
 bg="#011628"
