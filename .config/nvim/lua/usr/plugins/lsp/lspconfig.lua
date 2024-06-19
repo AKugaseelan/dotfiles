@@ -154,7 +154,7 @@ return {
 		})
 
 		lspconfig["powershell_es"].setup({
-			bundle_path = "~/PowerShellEditorServices/",
+			bundle_path = "~/",
 			capabilties = capabilities,
 			on_attach = on_attach,
 		})
